@@ -1,0 +1,11 @@
+slamgsb_home:
+    path:     /accueil
+    defaults: { _controller: SLAMGSBBundle:GSB:index }
+
+slamgsb_validerconnexion:
+    path:     /validerconnexion
+    defaults: { _controller: SLAMGSBBundle:GSB:validerconnexion }
+
+slamgsb_deconnexion:
+    path:     /deconnexion
+    defaults: { _controller: SLAMGSBBundle:GSB:deconnexion }
