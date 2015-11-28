@@ -1,11 +1,29 @@
 slamgsb_home:
     path:     /accueil
-    defaults: { _controller: SLAMGSBBundle:GSB:index }
+    defaults: { _controller: SLAMGSBBundle:Home:index }
 
 slamgsb_validerconnexion:
     path:     /validerconnexion
-    defaults: { _controller: SLAMGSBBundle:GSB:validerconnexion }
+    defaults: { _controller: SLAMGSBBundle:Home:validerconnexion }
 
 slamgsb_deconnexion:
     path:     /deconnexion
-    defaults: { _controller: SLAMGSBBundle:GSB:deconnexion }
+    defaults: { _controller: SLAMGSBBundle:Home:deconnexion }
+
+slamgsb_listefrais:
+    path:     /listefrais
+    defaults: { _controller: SLAMGSBBundle:ListeFrais: index}
+
+slamgsb_saisirfrais:
+    path:     /saisirfrais
+    defaults: { _controller: SLAMGSBBundle:SaisirFrais: index}
+
+slamgsb_validerfraishorsforfaits:
+    path:     /validerfraishorsforfait
+    defaults: { _controller: SLAMGSBBundle:SaisirFrais: validerfraishorsforfait}
+
+slamgsb_supprimerfraishorsforfait:
+    path:     /supprimerfraishorsforfait/{id}
+    defaults: { _controller: SLAMGSBBundle:SaisirFrais: supprimerfraishorsforfait}
+
+

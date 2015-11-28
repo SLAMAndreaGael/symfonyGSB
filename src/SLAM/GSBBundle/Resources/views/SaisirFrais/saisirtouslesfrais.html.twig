@@ -1,0 +1,10 @@
+{% extends "SLAMGSBBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+  {% include 'SLAMGSBBundle:SaisirFrais:erreurs.html.twig' with {'leserreurs':leserreursforfait} %}
+  {% include 'SLAMGSBBundle:SaisirFrais:saisirfraisforfait.html.twig' with {'lesfraisforfait':lesfraisforfait,'nummois':nummois,'numannee':numannee} %}
+
+{% include 'SLAMGSBBundle:SaisirFrais:erreurs.html.twig' with {'leserreurs':leserreurshorsforfait} %}
+{% include 'SLAMGSBBundle:SaisirFrais:saisirfraishorsforfait.html.twig' with {'lesfraishorsforfait':lesfraishorsforfait} %}
+{% endblock %}
+{% endblock %}
