@@ -22,20 +22,20 @@ class __TwigTemplate_449ba41b40a82cbc240ab8a82c3a1363438c9ebbcd82beeb972b7d67908
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_416cdc59ad31acd4dc2611f02234c4a919c034021e50349fccceefaf8b89d776 = $this->env->getExtension("native_profiler");
-        $__internal_416cdc59ad31acd4dc2611f02234c4a919c034021e50349fccceefaf8b89d776->enter($__internal_416cdc59ad31acd4dc2611f02234c4a919c034021e50349fccceefaf8b89d776_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle:Home:connexion.html.twig"));
+        $__internal_009e0f5454b503448bebf57a46bb05b53a1f1fed4a078fcc27febc595408aa7e = $this->env->getExtension("native_profiler");
+        $__internal_009e0f5454b503448bebf57a46bb05b53a1f1fed4a078fcc27febc595408aa7e->enter($__internal_009e0f5454b503448bebf57a46bb05b53a1f1fed4a078fcc27febc595408aa7e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle:Home:connexion.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_416cdc59ad31acd4dc2611f02234c4a919c034021e50349fccceefaf8b89d776->leave($__internal_416cdc59ad31acd4dc2611f02234c4a919c034021e50349fccceefaf8b89d776_prof);
+        $__internal_009e0f5454b503448bebf57a46bb05b53a1f1fed4a078fcc27febc595408aa7e->leave($__internal_009e0f5454b503448bebf57a46bb05b53a1f1fed4a078fcc27febc595408aa7e_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_ad344003c26be517daf4f619a3eeeec76a615ded76335135e19619950ac3224e = $this->env->getExtension("native_profiler");
-        $__internal_ad344003c26be517daf4f619a3eeeec76a615ded76335135e19619950ac3224e->enter($__internal_ad344003c26be517daf4f619a3eeeec76a615ded76335135e19619950ac3224e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_d273495040b7b5be71f48795a7479f9223259e78a51009581ba2a59d48f8cbbd = $this->env->getExtension("native_profiler");
+        $__internal_d273495040b7b5be71f48795a7479f9223259e78a51009581ba2a59d48f8cbbd->enter($__internal_d273495040b7b5be71f48795a7479f9223259e78a51009581ba2a59d48f8cbbd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         echo "   ";
@@ -43,15 +43,15 @@ class __TwigTemplate_449ba41b40a82cbc240ab8a82c3a1363438c9ebbcd82beeb972b7d67908
         // line 28
         echo "     ";
         
-        $__internal_ad344003c26be517daf4f619a3eeeec76a615ded76335135e19619950ac3224e->leave($__internal_ad344003c26be517daf4f619a3eeeec76a615ded76335135e19619950ac3224e_prof);
+        $__internal_d273495040b7b5be71f48795a7479f9223259e78a51009581ba2a59d48f8cbbd->leave($__internal_d273495040b7b5be71f48795a7479f9223259e78a51009581ba2a59d48f8cbbd_prof);
 
     }
 
     // line 3
     public function block_bloc1($context, array $blocks = array())
     {
-        $__internal_bc4001928182e5b6a40cdb49138aab6d94e4d40eb5513702f6d2884607dc22d7 = $this->env->getExtension("native_profiler");
-        $__internal_bc4001928182e5b6a40cdb49138aab6d94e4d40eb5513702f6d2884607dc22d7->enter($__internal_bc4001928182e5b6a40cdb49138aab6d94e4d40eb5513702f6d2884607dc22d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bloc1"));
+        $__internal_13de9b5ad7df766323f2534c633e1e53c86c7eaf310d17b1963cd726ce24b2fd = $this->env->getExtension("native_profiler");
+        $__internal_13de9b5ad7df766323f2534c633e1e53c86c7eaf310d17b1963cd726ce24b2fd->enter($__internal_13de9b5ad7df766323f2534c633e1e53c86c7eaf310d17b1963cd726ce24b2fd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bloc1"));
 
         // line 4
         echo "<div id=\"contenu\">
@@ -68,7 +68,9 @@ class __TwigTemplate_449ba41b40a82cbc240ab8a82c3a1363438c9ebbcd82beeb972b7d67908
       ";
         }
         // line 10
-        echo "<form method=\"POST\" action=\"index.php?uc=connexion&action=valideConnexion\">
+        echo "<form method=\"POST\" action=\"";
+        echo $this->env->getExtension('routing')->getPath("slamgsb_validerconnexion");
+        echo "\">
    
     
 \t\t\t<p>
@@ -87,7 +89,7 @@ class __TwigTemplate_449ba41b40a82cbc240ab8a82c3a1363438c9ebbcd82beeb972b7d67908
 </div>
      ";
         
-        $__internal_bc4001928182e5b6a40cdb49138aab6d94e4d40eb5513702f6d2884607dc22d7->leave($__internal_bc4001928182e5b6a40cdb49138aab6d94e4d40eb5513702f6d2884607dc22d7_prof);
+        $__internal_13de9b5ad7df766323f2534c633e1e53c86c7eaf310d17b1963cd726ce24b2fd->leave($__internal_13de9b5ad7df766323f2534c633e1e53c86c7eaf310d17b1963cd726ce24b2fd_prof);
 
     }
 
@@ -115,7 +117,7 @@ class __TwigTemplate_449ba41b40a82cbc240ab8a82c3a1363438c9ebbcd82beeb972b7d67908
 /*          <div class ="erreur"">*/
 /*          <ul>{{ message }}</ul></div>*/
 /*       {% endif%}*/
-/* <form method="POST" action="index.php?uc=connexion&action=valideConnexion">*/
+/* <form method="POST" action="{{path('slamgsb_validerconnexion')}}">*/
 /*    */
 /*     */
 /* 			<p>*/

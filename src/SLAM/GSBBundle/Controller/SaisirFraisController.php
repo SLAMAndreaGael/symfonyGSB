@@ -1,10 +1,10 @@
 <?php
 namespace SLAM\GSBBundle\Controller;
 require_once("include/fct.inc.php");
-//require_once("include/class.pdogsb.inc.php");
+require_once("include/class.pdogsb.inc.php");
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session\Session;
-//use PdoGsb;
+use PdoGsb;
 
 class SaisirFraisController extends Controller
 {
@@ -16,8 +16,7 @@ class SaisirFraisController extends Controller
    $mois = getMois(date("d/m/Y"));
    $numAnnee = substr($mois,0,4);
    $numMois = substr($mois,4,2);
-   //$pdo = PdoGsb::getPdoGsb();
-   $pdo = $this->get('slamgsb.pdo');
+   $pdo = PdoGsb::getPdoGsb();
    if($pdo->estPremierFraisMois($idVisiteur,$mois))
    {
     $pdo->creeNouvellesLignesFrais($idVisiteur,$mois);
@@ -35,7 +34,7 @@ class SaisirFraisController extends Controller
    }
    $lesFraisForfait = $pdo->getLesFraisForfait($idVisiteur,$mois);
    $lesFraisHorsForfait = $pdo->getLesFraisHorsForfait($idVisiteur,$mois);
-   return $this->render('SLAMGSBBUndle:SaisirFrais:saisirtouslesfrais.html.twig', array('lesfraisforfait'=>$lesFraisForfait,'lesfraishorsforfait'=>$lesFraisHorsForfait,'nummois'=>$numMois,'numannee'=>$numAnnee,'leserreursforfait'=>$lesErreursForfaits,'leserreurshorsforfait'=>null));
+   return $this->render('SLAMGSBBundle:SaisirFrais:saisirtouslesfrais.html.twig', array('lesfraisforfait'=>$lesFraisForfait,'lesfraishorsforfait'=>$lesFraisHorsForfait,'nummois'=>$numMois,'numannee'=>$numAnnee,'leserreursforfait'=>$lesErreursForfaits,'leserreurshorsforfait'=>null));
   }
 
   public function validerfraishorsforfaitAction()
@@ -45,8 +44,7 @@ class SaisirFraisController extends Controller
    $mois = getMois(date("d/m/Y"));
    $numAnnee = substr($mois,0,4);
    $numMois = substr($mois,4,2);
-   //$pdo = PdoGsb::getPdoGsb();
-   $pdo = $this->get('slamgsb.pdo');
+   $pdo = PdoGsb::getPdoGsb();
    $request = $this->get('request');
    $dateFrais = $request->request->get('dateFrais');
    $libelle = $request->request->get('libelle');
@@ -68,8 +66,7 @@ class SaisirFraisController extends Controller
    $mois = getMois(date("d/m/Y"));
    $numAnnee = substr($mois,0,4);
    $numMois = substr($mois,4,2);
-   //$pdo = PdoGsb::getPdoGsb();
-   $pdo = $this->get('slamgsb.pdo');
+   $pdo = PdoGsb::getPdoGsb();
    if( $pdo->estValideSuppressionFrais($idVisiteur,$mois,$id))
    {
     $pdo->supprimerFraisHorsForfait($id);

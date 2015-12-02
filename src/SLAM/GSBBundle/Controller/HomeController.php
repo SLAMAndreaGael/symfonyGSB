@@ -1,10 +1,10 @@
 <?php
 namespace SLAM\GSBBundle\Controller;
 require_once("include/fct.inc.php");
-//require_once("include/class.pdogsb.inc.php");
+require_once("include/class.pdogsb.inc.php");
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session\Session;
-//use PdoGsb;
+use PdoGsb;
 
 class HomeController extends Controller
 {
@@ -25,8 +25,7 @@ class HomeController extends Controller
      $request = $this->get('request');
      $login = $request->request->get('login');
      $mdp = $request->request->get('mdp');
-     // $pdo = PdoGsb::getPdoGsb();
-     $pdo = $this->get('slamgsb.pdo');
+     $pdo = PdoGsb::getPdoGsb();
      $visiteur = $pdo->getInfosVisiteur($login,$mdp);
      if(!is_array($visiteur)){
        return $this->render('SLAMGSBBundle:Home:connexion.html.twig',array(

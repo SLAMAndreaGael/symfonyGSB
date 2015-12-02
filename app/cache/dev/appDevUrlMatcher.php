@@ -144,22 +144,22 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // slamgsb_listefrais
         if ($pathinfo === '/listefrais') {
-            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\ListeFraisController:: indexAction',  '_route' => 'slamgsb_listefrais',);
+            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\ListeFraisController::indexAction',  '_route' => 'slamgsb_listefrais',);
         }
 
         // slamgsb_saisirfrais
         if ($pathinfo === '/saisirfrais') {
-            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController:: indexAction',  '_route' => 'slamgsb_saisirfrais',);
+            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController::indexAction',  '_route' => 'slamgsb_saisirfrais',);
         }
 
         // slamgsb_validerfraishorsforfaits
         if ($pathinfo === '/validerfraishorsforfait') {
-            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController:: validerfraishorsforfaitAction',  '_route' => 'slamgsb_validerfraishorsforfaits',);
+            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController::validerfraishorsforfaitAction',  '_route' => 'slamgsb_validerfraishorsforfaits',);
         }
 
         // slamgsb_supprimerfraishorsforfait
         if (0 === strpos($pathinfo, '/supprimerfraishorsforfait') && preg_match('#^/supprimerfraishorsforfait/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'slamgsb_supprimerfraishorsforfait')), array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController:: supprimerfraishorsforfaitAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'slamgsb_supprimerfraishorsforfait')), array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController::supprimerfraishorsforfaitAction',));
         }
 
         // homepage

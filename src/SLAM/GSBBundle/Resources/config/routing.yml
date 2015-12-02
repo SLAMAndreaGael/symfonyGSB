@@ -12,18 +12,18 @@ slamgsb_deconnexion:
 
 slamgsb_listefrais:
     path:     /listefrais
-    defaults: { _controller: SLAMGSBBundle:ListeFrais: index}
+    defaults: { _controller: SLAMGSBBundle:ListeFrais:index }
 
 slamgsb_saisirfrais:
     path:     /saisirfrais
-    defaults: { _controller: SLAMGSBBundle:SaisirFrais: index}
+    defaults: { _controller: SLAMGSBBundle:SaisirFrais:index }
 
 slamgsb_validerfraishorsforfaits:
     path:     /validerfraishorsforfait
-    defaults: { _controller: SLAMGSBBundle:SaisirFrais: validerfraishorsforfait}
+    defaults: { _controller: SLAMGSBBundle:SaisirFrais:validerfraishorsforfait }
 
 slamgsb_supprimerfraishorsforfait:
     path:     /supprimerfraishorsforfait/{id}
-    defaults: { _controller: SLAMGSBBundle:SaisirFrais: supprimerfraishorsforfait}
+    defaults: { _controller: SLAMGSBBundle:SaisirFrais:supprimerfraishorsforfait }
 
 

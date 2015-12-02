@@ -1,10 +1,10 @@
 <?php
 namespace SLAM\GSBBundle\Controller;
 require_once("include/fct.inc.php");
-//require_once("include/class.pdogsb.inc.php");
+require_once("include/class.pdogsb.inc.php");
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-//use PdoGsb;
+use PdoGsb;
 
 class ListeFraisController extends Controller
 {
@@ -12,8 +12,7 @@ class ListeFraisController extends Controller
   {
     $session = $this->container->get('request')->getSession();
     $idVisiteur = $session->get('id');
-    //$pdo = PdoGsb::getPdoGsb();
-    $pdo = $this->get('slamgsb.pdo');
+    $pdo = PdoGsb::getPdoGsb();
     $lesMois = $pdo->getLesMoisDisponibles($idVisiteur);
     if($this->get('request')->getMethod() == 'GET')
     {
