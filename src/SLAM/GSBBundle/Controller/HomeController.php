@@ -35,6 +35,7 @@ class HomeController extends Controller
         $session->set('id',$visiteur['id']);
         $session->set('nom',$visiteur['nom']);
         $session->set('prenom',$visiteur['prenom']);
+        $session->set('immat',$visiteur['immat']);
         return $this->render('SLAMGSBBundle::accueil.html.twig');
      }
    }
@@ -45,5 +46,8 @@ class HomeController extends Controller
      $session->clear();
      return $this->render('SLAMGSBBundle:Home:connexion.html.twig');
    }
-}
-    
+
+   public function vehiculeutiliséAction()
+   {
+   }
+}    

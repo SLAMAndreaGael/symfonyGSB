@@ -162,6 +162,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'slamgsb_supprimerfraishorsforfait')), array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\SaisirFraisController::supprimerfraishorsforfaitAction',));
         }
 
+        // slamgsb_vehicule
+        if ($pathinfo === '/vehiculesutilisés') {
+            return array (  '_controller' => 'SLAM\\GSBBundle\\Controller\\HomeController::vehiculeutiliséAction',  '_route' => 'slamgsb_vehicule',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

@@ -21,20 +21,20 @@ class __TwigTemplate_a3201557089680756fa2c5fe147aaaa619905e10446a4e737588f1d81b9
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_b836921f923bec2e6443e8bc710253750b7192ee3f694a4b7473246c778b5ab9 = $this->env->getExtension("native_profiler");
-        $__internal_b836921f923bec2e6443e8bc710253750b7192ee3f694a4b7473246c778b5ab9->enter($__internal_b836921f923bec2e6443e8bc710253750b7192ee3f694a4b7473246c778b5ab9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle::accueil.html.twig"));
+        $__internal_441783d54ba52c71be3ff42d67ed85874e763569f2dd5b335ff75527d279be8c = $this->env->getExtension("native_profiler");
+        $__internal_441783d54ba52c71be3ff42d67ed85874e763569f2dd5b335ff75527d279be8c->enter($__internal_441783d54ba52c71be3ff42d67ed85874e763569f2dd5b335ff75527d279be8c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle::accueil.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_b836921f923bec2e6443e8bc710253750b7192ee3f694a4b7473246c778b5ab9->leave($__internal_b836921f923bec2e6443e8bc710253750b7192ee3f694a4b7473246c778b5ab9_prof);
+        $__internal_441783d54ba52c71be3ff42d67ed85874e763569f2dd5b335ff75527d279be8c->leave($__internal_441783d54ba52c71be3ff42d67ed85874e763569f2dd5b335ff75527d279be8c_prof);
 
     }
 
     // line 2
     public function block_menu($context, array $blocks = array())
     {
-        $__internal_795df08985610c92b5fba06945634b15a86eeb2dd58e5d3e77fa38af202b4a57 = $this->env->getExtension("native_profiler");
-        $__internal_795df08985610c92b5fba06945634b15a86eeb2dd58e5d3e77fa38af202b4a57->enter($__internal_795df08985610c92b5fba06945634b15a86eeb2dd58e5d3e77fa38af202b4a57_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
+        $__internal_1a9827e31cdabce9ed10b0ab560d3af36b4f7617058d276fa8d6194e27c0ab03 = $this->env->getExtension("native_profiler");
+        $__internal_1a9827e31cdabce9ed10b0ab560d3af36b4f7617058d276fa8d6194e27c0ab03->enter($__internal_1a9827e31cdabce9ed10b0ab560d3af36b4f7617058d276fa8d6194e27c0ab03_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "menu"));
 
         // line 3
         echo "<div id=\"menuGauche\">
@@ -46,37 +46,46 @@ class __TwigTemplate_a3201557089680756fa2c5fe147aaaa619905e10446a4e737588f1d81b9
             // line 7
             echo "              Visiteur: bonjour ";
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "nom"), "method"), "html", null, true);
-            echo "<br>
+            echo "<br/>
+              Immatriculation: ";
+            // line 8
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "session", array()), "get", array(0 => "immat"), "method"), "html", null, true);
+            echo "<br/>
           ";
         }
-        // line 9
+        // line 10
         echo "       </h3>
       </div>  
         <ul id=\"menuList\">
            <li class=\"smenu\">
               <a href=\"";
-        // line 13
+        // line 14
+        echo $this->env->getExtension('routing')->getPath("slamgsb_vehicule");
+        echo "\" title=\"Véhicules utilisés\">Véhicules Utilisés</a>
+           </li>
+           <li class=\"smenu\">
+              <a href=\"";
+        // line 17
         echo $this->env->getExtension('routing')->getPath("slamgsb_saisirfrais");
         echo "\" title=\"Saisie fiche de frais \">Saisie fiche de frais</a>
            </li>
            <li class=\"smenu\">
               <a href=\"";
-        // line 16
+        // line 20
         echo $this->env->getExtension('routing')->getPath("slamgsb_listefrais");
         echo "\" title=\"Consultation de mes fiches de frais\">Mes fiches de frais</a>
            </li>
  \t   <li class=\"smenu\">
               <a href=\"";
-        // line 19
+        // line 23
         echo $this->env->getExtension('routing')->getPath("slamgsb_deconnexion");
         echo "\" title=\"Se déconnecter\">Déconnexion</a>
            </li>
          </ul>
-        
     </div>
 ";
         
-        $__internal_795df08985610c92b5fba06945634b15a86eeb2dd58e5d3e77fa38af202b4a57->leave($__internal_795df08985610c92b5fba06945634b15a86eeb2dd58e5d3e77fa38af202b4a57_prof);
+        $__internal_1a9827e31cdabce9ed10b0ab560d3af36b4f7617058d276fa8d6194e27c0ab03->leave($__internal_1a9827e31cdabce9ed10b0ab560d3af36b4f7617058d276fa8d6194e27c0ab03_prof);
 
     }
 
@@ -92,7 +101,7 @@ class __TwigTemplate_a3201557089680756fa2c5fe147aaaa619905e10446a4e737588f1d81b9
 
     public function getDebugInfo()
     {
-        return array (  71 => 19,  65 => 16,  59 => 13,  53 => 9,  47 => 7,  45 => 6,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  81 => 23,  75 => 20,  69 => 17,  63 => 14,  57 => 10,  52 => 8,  47 => 7,  45 => 6,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /*   {% extends "SLAMGSBBundle::layout.html.twig" %}*/
@@ -101,11 +110,15 @@ class __TwigTemplate_a3201557089680756fa2c5fe147aaaa619905e10446a4e737588f1d81b9
 /*      <div id="infosUtil">*/
 /*        <h3>*/
 /*           {%if(app.session.get('nom') is defined ) %}*/
-/*               Visiteur: bonjour {{app.session.get('nom')}}<br>*/
+/*               Visiteur: bonjour {{app.session.get('nom')}}<br/>*/
+/*               Immatriculation: {{app.session.get('immat')}}<br/>*/
 /*           {%endif%}*/
 /*        </h3>*/
 /*       </div>  */
 /*         <ul id="menuList">*/
+/*            <li class="smenu">*/
+/*               <a href="{{path('slamgsb_vehicule')}}" title="Véhicules utilisés">Véhicules Utilisés</a>*/
+/*            </li>*/
 /*            <li class="smenu">*/
 /*               <a href="{{path('slamgsb_saisirfrais')}}" title="Saisie fiche de frais ">Saisie fiche de frais</a>*/
 /*            </li>*/
@@ -116,7 +129,6 @@ class __TwigTemplate_a3201557089680756fa2c5fe147aaaa619905e10446a4e737588f1d81b9
 /*               <a href="{{path('slamgsb_deconnexion')}}" title="Se déconnecter">Déconnexion</a>*/
 /*            </li>*/
 /*          </ul>*/
-/*         */
 /*     </div>*/
 /* {% endblock %}*/
 /* */
