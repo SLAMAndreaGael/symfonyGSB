@@ -49,5 +49,10 @@ class HomeController extends Controller
 
    public function vehiculeutiliséAction()
    {
+    $session = $this->get('request')->getSession();
+    $request = $this->get('request'); 
+    $pdo = PdoGsb::getPdoGsb();
+    $lesVehicules = $pdo-> getVehicules();
+    return $this->render('SLAMGSBBundle:Home:vehicule.html.twig', array('lesvehicules'=>$lesVehicules));
    }
 }    

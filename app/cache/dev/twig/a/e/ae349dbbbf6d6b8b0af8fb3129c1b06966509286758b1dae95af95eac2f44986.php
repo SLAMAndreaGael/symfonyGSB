@@ -15,8 +15,8 @@ class __TwigTemplate_eab31467eed5ca5fc79a3ebcdfada1f8e6eee5b44d155b29adaa8fe4a87
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1b595e0bc30ba92ffedc2c996e8c12c4c487e91026811671a333108b3b7e872f = $this->env->getExtension("native_profiler");
-        $__internal_1b595e0bc30ba92ffedc2c996e8c12c4c487e91026811671a333108b3b7e872f->enter($__internal_1b595e0bc30ba92ffedc2c996e8c12c4c487e91026811671a333108b3b7e872f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle:SaisirFrais:saisirfraisforfait.html.twig"));
+        $__internal_4839dae20f643cada7595d150b8ff1c65b49b7fdac58038f9d62ac56de72eb78 = $this->env->getExtension("native_profiler");
+        $__internal_4839dae20f643cada7595d150b8ff1c65b49b7fdac58038f9d62ac56de72eb78->enter($__internal_4839dae20f643cada7595d150b8ff1c65b49b7fdac58038f9d62ac56de72eb78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle:SaisirFrais:saisirfraisforfait.html.twig"));
 
         // line 1
         echo "<div id=\"contenu\">
@@ -82,7 +82,7 @@ class __TwigTemplate_eab31467eed5ca5fc79a3ebcdfada1f8e6eee5b44d155b29adaa8fe4a87
 </div>
 ";
         
-        $__internal_1b595e0bc30ba92ffedc2c996e8c12c4c487e91026811671a333108b3b7e872f->leave($__internal_1b595e0bc30ba92ffedc2c996e8c12c4c487e91026811671a333108b3b7e872f_prof);
+        $__internal_4839dae20f643cada7595d150b8ff1c65b49b7fdac58038f9d62ac56de72eb78->leave($__internal_4839dae20f643cada7595d150b8ff1c65b49b7fdac58038f9d62ac56de72eb78_prof);
 
     }
 

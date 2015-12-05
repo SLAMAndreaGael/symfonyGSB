@@ -60,6 +60,13 @@ class PdoGsb{
 		$ligne = $rs->fetch();
 		return $ligne;
 	}
+   
+        public function getVehicules(){
+                $req = "select Affectation.id, Affectation.immat, Visiteur.nom,Visiteur.prenom from Affectation,Visiteur where Affectation.id = Visiteur.id";
+                $rs = PdoGsb::$monPdo->query($req);
+                $lesLignes = $rs->fetchAll();
+                return $lesLignes;
+        } 
 
 /**
  * Retourne sous forme d'un tableau associatif toutes les lignes de frais hors forfait
