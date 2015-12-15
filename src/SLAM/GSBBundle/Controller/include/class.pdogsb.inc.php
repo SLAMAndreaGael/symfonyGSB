@@ -61,8 +61,8 @@ class PdoGsb{
 		return $ligne;
 	}
    
-        public function getVehicules(){
-                $req = "select Affectation.id, Affectation.immat, Visiteur.nom,Visiteur.prenom from Affectation,Visiteur where Affectation.id = Visiteur.id";
+        public function getEquipements(){
+                $req = "select Tablette.libelle, Tablette.memoireInt, Tablette.memoireExt, Visiteur.nom, Visiteur.prenom from Tablette,Visiteur where Tablette.id=Visiteur.idtablette";
                 $rs = PdoGsb::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
                 return $lesLignes;

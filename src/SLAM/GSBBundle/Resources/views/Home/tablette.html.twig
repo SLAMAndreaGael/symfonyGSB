@@ -1,0 +1,31 @@
+{% extends "SLAMGSBBundle::accueil.html.twig" %}
+{% block body %}
+{% block bloc1 %}
+<div id="contenu">
+     <table class="listeLegere">
+       <h2>Détail Equipement</h2>
+          <tr>
+             <th class="nom">Nom</th>
+             <th class="prenom">Prénom</th>
+             <th class="libelle">Tablette</th>
+             <th class="memoireInt">Mémoire Interne</th>
+             <th class="memoireExt">Mémoire Externe</th>
+          </tr>
+          {% for unEquipement in lesequipements %}
+             {% set nom = unEquipement.nom %}
+             {% set prenom = unEquipement.prenom %}
+             {% set libelle = unEquipement.libelle %}
+             {% set memoireInt = unEquipement.memoireInt %}
+             {% set memoireExt = unEquipement.memoireExt %}
+
+          <tr>
+             <td>{{nom}}</td>
+             <td>{{prenom}}</td>
+             <td>{{libelle}}</td>
+             <td>{{memoireInt}}</td>
+             <td>{{memoireExt}}</td>
+          </tr>
+          {% endfor %}
+     </table>
+</div>
+

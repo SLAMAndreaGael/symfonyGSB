@@ -47,12 +47,12 @@ class HomeController extends Controller
      return $this->render('SLAMGSBBundle:Home:connexion.html.twig');
    }
 
-   public function vehiculeutiliséAction()
+   public function détailEquipementAction()
    {
     $session = $this->get('request')->getSession();
     $request = $this->get('request'); 
     $pdo = PdoGsb::getPdoGsb();
-    $lesVehicules = $pdo-> getVehicules();
-    return $this->render('SLAMGSBBundle:Home:vehicule.html.twig', array('lesvehicules'=>$lesVehicules));
+    $lesEquipements = $pdo-> getEquipements();
+    return $this->render('SLAMGSBBundle:Home:tablette.html.twig', array('lesequipements'=>$lesEquipements));
    }
 }    
