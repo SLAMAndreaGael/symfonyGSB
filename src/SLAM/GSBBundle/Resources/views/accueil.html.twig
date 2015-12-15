@@ -5,13 +5,12 @@
        <h3>
           {%if(app.session.get('nom') is defined ) %}
               Visiteur: bonjour {{app.session.get('nom')}}<br/>
-              Immatriculation: {{app.session.get('immat')}}<br/>
           {%endif%}
        </h3>
       </div>  
         <ul id="menuList">
            <li class="smenu">
-              <a href="{{path('slamgsb_vehicule')}}" title="Véhicules utilisés">Véhicules Utilisés</a>
+              <a href="{{path('slamgsb_tablette')}}" title="Détail Equipement">Détail Equipements</a>
            </li>
            <li class="smenu">
               <a href="{{path('slamgsb_saisirfrais')}}" title="Saisie fiche de frais ">Saisie fiche de frais</a>
