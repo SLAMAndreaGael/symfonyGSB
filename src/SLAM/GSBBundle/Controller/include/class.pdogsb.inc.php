@@ -62,9 +62,14 @@ class PdoGsb{
 	}
    
         public function getVehicules(){
-                $req = "select Affectation.id, Affectation.immat, Visiteur.nom,Visiteur.prenom from Affectation,Visiteur where Affectation.id = Visiteur.id";
+                $req = "select Affectation.id, Affectation.immat, Affectation.dateDébut, Visiteur.nom,Visiteur.prenom from Affectation,Visiteur where Affectation.id = Visiteur.id";
                 $rs = PdoGsb::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
+                $nbLignes = count($lesLignes);
+                for ($i=0; $i<$nbLignes; $i++){
+                        $date = $lesLignes[$i]['dateDébut'];
+                        $lesLignes[$i]['dateDébut'] =  dateAnglaisVersFrancais($date);
+                }
                 return $lesLignes;
         } 
 

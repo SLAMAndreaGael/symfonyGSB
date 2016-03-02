@@ -7,15 +7,18 @@
           <tr>
              <th class="nom">Nom</th>
              <th class="prenom">Prénom</th>
+             <th class="date">Date</th>
              <th class="immat">Immatriculation</th>
           </tr>
           {% for unVehicule in lesvehicules %}
              {% set nom = unVehicule.nom %}
              {% set prenom = unVehicule.prenom %}
+             {% set dateDébut = unVehicule.dateDébut %}
              {% set immat = unVehicule.immat %}
           <tr>
              <td>{{nom}}</td>
              <td>{{prenom}}</td>
+             <td>{{dateDébut}}</td>
              <td>{{immat}}</td>
           </tr>
           {% endfor %}

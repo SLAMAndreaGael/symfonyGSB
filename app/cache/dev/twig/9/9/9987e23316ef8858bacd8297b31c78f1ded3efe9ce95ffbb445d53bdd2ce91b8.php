@@ -22,32 +22,32 @@ class __TwigTemplate_d4be6263abf45ecf1151de2cee4ab745d8e86005abaedbd45f422326725
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dea3f99f592ffc8febc7bacec3cdbde85696dba9b09c62a045c252aefc5f173d = $this->env->getExtension("native_profiler");
-        $__internal_dea3f99f592ffc8febc7bacec3cdbde85696dba9b09c62a045c252aefc5f173d->enter($__internal_dea3f99f592ffc8febc7bacec3cdbde85696dba9b09c62a045c252aefc5f173d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle:SaisirFrais:saisirtouslesfrais.html.twig"));
+        $__internal_572b630e21fbf55d431453644332d518bf50da419ad0e6876f756b23dab75b44 = $this->env->getExtension("native_profiler");
+        $__internal_572b630e21fbf55d431453644332d518bf50da419ad0e6876f756b23dab75b44->enter($__internal_572b630e21fbf55d431453644332d518bf50da419ad0e6876f756b23dab75b44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SLAMGSBBundle:SaisirFrais:saisirtouslesfrais.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_dea3f99f592ffc8febc7bacec3cdbde85696dba9b09c62a045c252aefc5f173d->leave($__internal_dea3f99f592ffc8febc7bacec3cdbde85696dba9b09c62a045c252aefc5f173d_prof);
+        $__internal_572b630e21fbf55d431453644332d518bf50da419ad0e6876f756b23dab75b44->leave($__internal_572b630e21fbf55d431453644332d518bf50da419ad0e6876f756b23dab75b44_prof);
 
     }
 
     // line 2
     public function block_body($context, array $blocks = array())
     {
-        $__internal_68401c2016a4cbbfe9267ea55ed809335961e21f7df792f5aa0f1c07d96bbd44 = $this->env->getExtension("native_profiler");
-        $__internal_68401c2016a4cbbfe9267ea55ed809335961e21f7df792f5aa0f1c07d96bbd44->enter($__internal_68401c2016a4cbbfe9267ea55ed809335961e21f7df792f5aa0f1c07d96bbd44_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_e32dc69e72dd6c3a93e0ce931bff03c5522fb121e6a7ad2caf641a2881830bc4 = $this->env->getExtension("native_profiler");
+        $__internal_e32dc69e72dd6c3a93e0ce931bff03c5522fb121e6a7ad2caf641a2881830bc4->enter($__internal_e32dc69e72dd6c3a93e0ce931bff03c5522fb121e6a7ad2caf641a2881830bc4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 3
         $this->displayBlock('bloc1', $context, $blocks);
         
-        $__internal_68401c2016a4cbbfe9267ea55ed809335961e21f7df792f5aa0f1c07d96bbd44->leave($__internal_68401c2016a4cbbfe9267ea55ed809335961e21f7df792f5aa0f1c07d96bbd44_prof);
+        $__internal_e32dc69e72dd6c3a93e0ce931bff03c5522fb121e6a7ad2caf641a2881830bc4->leave($__internal_e32dc69e72dd6c3a93e0ce931bff03c5522fb121e6a7ad2caf641a2881830bc4_prof);
 
     }
 
     public function block_bloc1($context, array $blocks = array())
     {
-        $__internal_b541ed1feac79ce8705ad1e409783813b294ed4cdee49f7e1a6a3729a4fd9262 = $this->env->getExtension("native_profiler");
-        $__internal_b541ed1feac79ce8705ad1e409783813b294ed4cdee49f7e1a6a3729a4fd9262->enter($__internal_b541ed1feac79ce8705ad1e409783813b294ed4cdee49f7e1a6a3729a4fd9262_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bloc1"));
+        $__internal_81e4a7049551642797ecf98ec3acc651a2d618a1f5e036639153986d87fd8550 = $this->env->getExtension("native_profiler");
+        $__internal_81e4a7049551642797ecf98ec3acc651a2d618a1f5e036639153986d87fd8550->enter($__internal_81e4a7049551642797ecf98ec3acc651a2d618a1f5e036639153986d87fd8550_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "bloc1"));
 
         // line 4
         echo "  ";
@@ -63,7 +63,7 @@ class __TwigTemplate_d4be6263abf45ecf1151de2cee4ab745d8e86005abaedbd45f422326725
         // line 8
         $this->loadTemplate("SLAMGSBBundle:SaisirFrais:saisirfraishorsforfait.html.twig", "SLAMGSBBundle:SaisirFrais:saisirtouslesfrais.html.twig", 8)->display(array_merge($context, array("lesfraishorsforfait" => (isset($context["lesfraishorsforfait"]) ? $context["lesfraishorsforfait"] : $this->getContext($context, "lesfraishorsforfait")))));
         
-        $__internal_b541ed1feac79ce8705ad1e409783813b294ed4cdee49f7e1a6a3729a4fd9262->leave($__internal_b541ed1feac79ce8705ad1e409783813b294ed4cdee49f7e1a6a3729a4fd9262_prof);
+        $__internal_81e4a7049551642797ecf98ec3acc651a2d618a1f5e036639153986d87fd8550->leave($__internal_81e4a7049551642797ecf98ec3acc651a2d618a1f5e036639153986d87fd8550_prof);
 
     }
 
