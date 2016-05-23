@@ -54,15 +54,14 @@ class PdoGsb{
  * @return l'id, le nom et le prénom sous la forme d'un tableau associatif 
 */
 	public function getInfosVisiteur($login, $mdp){
-		$req = "select Visiteur.id as id, Visiteur.nom as nom, Visiteur.prenom as prenom,Affectation.immat as immat from Visiteur,Affectation 
-		where Visiteur.login='$login' and Visiteur.mdp='$mdp' and Affectation.id=Visiteur.id";
+		$req = "select Visiteur.id as id, Visiteur.nom as nom, Visiteur.prenom as prenom, Role.libelleRole as libelleRole from Visiteur, Role where Visiteur.login='$login' and Visiteur.mdp='$mdp' and Visiteur.idRole=Role.idRole";
 		$rs = PdoGsb::$monPdo->query($req);
 		$ligne = $rs->fetch();
 		return $ligne;
 	}
    
         public function getVehicules(){
-                $req = "select Affectation.id, Affectation.immat, Affectation.dateDébut, Visiteur.nom,Visiteur.prenom from Affectation,Visiteur where Affectation.id = Visiteur.id";
+                $req = "select Affectation.id, Affectation.immat, Affectation.dateDébut, Visiteur.nom,Visiteur.prenom, Vehicule.marque, Vehicule.modèle as modele, Vehicule.couleur from Affectation,Visiteur, Vehicule where Affectation.id = Visiteur.id and Vehicule.immat=Affectation.immat";
                 $rs = PdoGsb::$monPdo->query($req);
                 $lesLignes = $rs->fetchAll();
                 $nbLignes = count($lesLignes);
@@ -71,8 +70,33 @@ class PdoGsb{
                         $lesLignes[$i]['dateDébut'] =  dateAnglaisVersFrancais($date);
                 }
                 return $lesLignes;
+        }
+      
+        public function getVehiculesUtil($idVisiteur){
+               $req = "select Affectation.immat as immat, Affectation.dateDébut as dateDebut, Vehicule.marque as marque, Vehicule.modèle as modele, Vehicule.couleur as couleur from Affectation, Vehicule, Visiteur where Visiteur.id=Affectation.id and Vehicule.immat=Affectation.immat and Visiteur.id='$idVisiteur'";
+	       $rs = PdoGsb::$monPdo->query($req);
+	       $lesLignes = $rs->fetchAll();
+	       $nbLignes = count($lesLignes);
+               for ($i=0; $i<$nbLignes; $i++){
+                       $date = $lesLignes[$i]['dateDebut'];
+                       $lesLignes[$i]['dateDebut'] = dateAnglaisVersFrancais($date);
+               }
+               return $lesLignes;
+        }
+ 
+        public function getIdVisiteurs(){
+               $req = "select Visiteur.id from Visiteur";
+               $rs = PdoGsb::$monPdo->query($req);
+               $lesLignes = $rs->fetchAll();
+               return $lesLignes;
         } 
-
+        
+        public function getImmat(){
+               $req = "select Vehicule.immat from Vehicule";
+               $rs = PdoGsb::$monPdo->query($req);
+               $lesLignes = $rs->fetchAll();
+               return $lesLignes;
+        }
 /**
  * Retourne sous forme d'un tableau associatif toutes les lignes de frais hors forfait
  * concernées par les deux arguments

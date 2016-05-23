@@ -35,7 +35,7 @@ class HomeController extends Controller
         $session->set('id',$visiteur['id']);
         $session->set('nom',$visiteur['nom']);
         $session->set('prenom',$visiteur['prenom']);
-        $session->set('immat',$visiteur['immat']);
+        $session->set('libelleRole',$visiteur['libelleRole']);
         return $this->render('SLAMGSBBundle::accueil.html.twig');
      }
    }
@@ -50,9 +50,40 @@ class HomeController extends Controller
    public function vehiculeutiliséAction()
    {
     $session = $this->get('request')->getSession();
-    $request = $this->get('request'); 
+    $request = $this->get('request');
+    $idVisiteur = $session->get('id');
+    $libelleRole = $session->get('libelleRole'); 
     $pdo = PdoGsb::getPdoGsb();
-    $lesVehicules = $pdo-> getVehicules();
-    return $this->render('SLAMGSBBundle:Home:vehicule.html.twig', array('lesvehicules'=>$lesVehicules));
+    if( ($libelleRole) == "DAF" )
+    {
+      $lesVehicules = $pdo->getVehicules();
+      $lesId = $pdo->getIdVisiteurs();
+    return $this->render('SLAMGSBBundle:Home:vehiculeDAF.html.twig', array('lesvehicules'=>$lesVehicules, 'lesId'=>$lesId ));
+    }else{
+      if( ($libelleRole) == "Admin" )
+      {
+       $lesVehicules = $pdo->getVehicules();
+       return $this->render('SLAMGSBBundle:Home:vehiculeAdmin.html.twig', array('lesvehicules'=>$lesVehicules));
+      }else{
+      $lesVehicules = $pdo->getVehiculesUtil($idVisiteur);
+      return $this->render('SLAMGSBBundle:Home:vehiculeUtil.html.twig', array('lesvehicules'=>$lesVehicules));
+        }
+    }
+   }
+
+   public function affectervéhiculeAction()
+   { 
+    $session = $this->get('request')->getSession();
+    $request = $this->get('request');
+    $libelleRole = $session->get('libelleRole');
+    $pdo = PdoGsb::getPdoGsb();
+    if(($libelleRole) != "Admin")
+    {
+      return $this->render('SLAMGSBBundle:Home:affecter.html.twig', array('message'=>"Vous n'avez pas accès à cette section."));
+    }else{
+      $lesId = $pdo->getIdVisiteurs();
+      $lesImmat = $pdo->getImmat();
+      return $this->render('SLAMGSBBundle:Home:affecter.html.twig', array('lesId'=>$lesId, 'lesImmat'=>$lesImmat));
+   }
    }
 }    

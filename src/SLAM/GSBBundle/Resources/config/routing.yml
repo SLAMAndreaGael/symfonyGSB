@@ -25,7 +25,15 @@ slamgsb_validerfraishorsforfaits:
 slamgsb_supprimerfraishorsforfait:
     path:     /supprimerfraishorsforfait/{id}
     defaults: { _controller: SLAMGSBBundle:SaisirFrais:supprimerfraishorsforfait }
+
 slamgsb_vehicule:
     path:     /vehiculesutilisés
     defaults: { _controller: SLAMGSBBundle:Home:vehiculeutilisé }
 
+slamgsb_affecter:
+    path:     /affectervéhicule
+    defaults: { _controller: SLAMGSBBundle:Home:affectervéhicule }
+
+slamgsb_valideraffecter:
+    path:     /valideraffecter
+    defaults: { _controller: SLAMGSBBundle:Home:valideraffecter }

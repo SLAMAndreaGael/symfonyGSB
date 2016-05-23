@@ -5,24 +5,24 @@
      <table class="listeLegere">
        <h2>Véhicules utilisés</h2>
           <tr>
-             <th class="nom">Nom</th>
-             <th class="prenom">Prénom</th>
+             <th class="marque">Marque</th>
+             <th class="modele">Modèle</th>
              <th class="date">Date</th>
              <th class="immat">Immatriculation</th>
           </tr>
           {% for unVehicule in lesvehicules %}
-             {% set nom = unVehicule.nom %}
-             {% set prenom = unVehicule.prenom %}
-             {% set dateDébut = unVehicule.dateDébut %}
+             {% set marque = unVehicule.marque %}
+             {% set modele = unVehicule.modele %}
+             {% set dateDebut = unVehicule.dateDebut %}
              {% set immat = unVehicule.immat %}
           <tr>
-             <td>{{nom}}</td>
-             <td>{{prenom}}</td>
-             <td>{{dateDébut}}</td>
+             <td>{{marque}}</td>
+             <td>{{modele}}</td>
+             <td>{{dateDebut}}</td>
              <td>{{immat}}</td>
           </tr>
           {% endfor %}
-     </table>
-</div>
+       </table>
+     </div>
 {% endblock %}
 {% endblock %}
